@@ -1,0 +1,1045 @@
+
+@font-face{
+    font-family:"readBeta2 sans-serif";
+    font-weight:400;
+    font-display:swap;
+    src:url(readBeta2-Light.woff2) format("woff2")}
+@font-face{
+    font-family:"readBeta2 sans-serif";
+    font-weight:700;
+    font-display:swap;
+    src:url(readBeta2-Medium.woff2) format("woff2")}
+* {
+    font-family: "readBeta2 sans-serif";
+}
+body {height: 1000px; background-color: black;}
+svg {
+    width: 10px;
+    height: 11px;
+    fill: #0089cd;
+}
+.SvgIcon {
+    display: none;
+}
+.DaciaMainHeader__mobile, 
+.DaciaMainHeader__top {
+    display: none;
+}
+.HeaderColumn__SvgIcon {
+    display: none;       
+}
+header {
+    display: block;
+    max-width: 1280px;
+    margin: 0 auto 0;
+    background-color: #fff;
+    height: 80px;
+    font-family: "readBeta2 sans-serif";
+    line-height: 1.45;
+    color: #fff;
+}
+.DaciaMainHeader__desktop {
+    display: inherit;
+}
+.DaciaMainHeader__content {
+    border-right: 1px solid #f0f3f5;
+}
+header ul {
+    list-style-type: none;
+}
+header a {
+    display: inline-block;
+    text-decoration: none;
+    color: #10314c;
+}
+.DaciaMainHeader__bottom{
+    display: flex;
+    height: 80px;
+}
+.DaciaMainHeader__brand, .MainMenu {
+    position: relative;
+    display: inline-flex;
+    top: 0;
+    vertical-align: top;
+}
+.DaciaMainHeader__logo, .DaciaMainHeader__brand {
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    margin-right: 16px;
+}
+.MainMenu {
+    display: flex;
+    position: relative;
+    min-width: 720px;
+    width: auto;
+    height: 80px;
+    top: 0;
+}
+.MainMenu__navList {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.MainMenuEntry {
+    display: inline-block;
+    height: 77px;
+    border-bottom: 3px solid #ffffff00;
+}
+.MainMenuEntry__link {
+    display: inline-block;
+    padding: 0 8px;
+    vertical-align: middle;
+    line-height: 77px;
+    height: 100%;
+    font-size: 13px;
+}
+.MainMenuEntry__link:hover {
+    cursor: pointer;
+}
+.DaciaHeaderButtons {
+    position: relative;
+    margin-right: 16px;
+    float: right;
+    right: 0;
+    margin-left: auto;
+}
+.DaciaHeaderButtons__button {
+    padding: 8px 16px;
+    text-align: center;
+    color: #129ade;
+    height: 64px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    float: right;
+}
+.DaciaHeaderButtons__iconSvg {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
+.DaciaHeaderButtons__text {
+    margin-top: 4px;
+}
+.DaciaMainHeader__overlay {
+    display: none;
+}
+.MainMenuEntry:hover {
+    border-bottom-color: #0089cd;
+}
+.MainMenuEntry:hover .MainMenuEntry__link {
+    color: #0089cd;
+}
+.dropdownExpand {
+display: none;
+}
+.EditorialContentZone {
+    box-sizing: border-box;
+    padding: 16px 32px 32px;
+    position: absolute;
+    margin: 0 auto 0;
+    left: -96px;
+    top: 80px;
+    z-index: 1;
+    width: 1280px;
+    font-size: 14px;
+    color: #10314c;
+    height: fit-content;
+    background-color: #fff;
+    border-left: 1px solid #f0f3f5;
+    border-right: 1px solid #f0f3f5;
+}
+.MainMenuEntry__megaDropdown {
+    border-top: 1px solid #f0f3f5;
+}
+.MainMenuRangePicker__contentLeft, .MainMenuRangePicker__content_pos {
+    display: inline-block;
+}
+
+.MainMenuRangePicker__content {
+    line-height: 16px;
+    padding-top: 8px;
+    display: block;
+}
+.MainMenuRangePicker__content:hover a {
+    color: #000;
+    cursor: pointer;
+}
+.MainMenuRangePicker__link {
+    position: relative;
+    font-weight: 700;
+    color:#0089cd;
+}
+.MainMenuRangePicker__link:hover .MainMenuRangePicker__svgArrowRight {
+    margin-left: 22px;
+}
+.MainMenuRangePicker__links {
+    position: relative;
+    bottom: 0;
+    margin-top: 175px;
+    padding: 8px 0;
+}
+.MainMenuRangePicker__listElement {
+    margin-bottom: 8px;
+}
+.MainMenuRangePicker__svgArrowRight {
+    margin:  3px auto;
+    margin-left: 15px;
+    float: right;
+    color: #0089cd;
+    fill: #0089cd !important;
+    transition: margin-left 0.3s ease;
+}
+.MainMenuRangePicker__svgArrowRight path {
+    color: #0089cd;
+    fill: #0089cd !important;
+}
+.MainMenuRangePicker__contentLeft {
+    width: 20%;
+    position: relative;
+    height: 375px;
+}
+.MainMenuRangeModels {
+    border-left: 1px solid #f0f3f5;
+    padding-left: 32px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.ModelViewer {
+    margin: 0 8px 0;
+    width: auto;
+    min-height: 160px;
+    height: 188px;
+}
+.MainMenuEntry__dropdown {
+    display: none;
+}
+.MainMenuRangePicker__content_pos {
+    width: 80%;
+    float: right;
+}
+.PictureElement__imgDefault {
+    height: 145px;
+    margin-bottom: 12px;
+}
+.ModelViewer__name {
+    padding-left: 32px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.MainMenuRangeModels__element {
+    display: flex;
+    justify-content: center;
+    min-height: 160px;
+    flex-direction: column;
+    width:171px;
+}
+.MainMenuRangeModels__linkLabel {
+    text-align: center;
+}
+.ButtonMore {
+    background-color: #0089cd;
+    border-radius: 100%;
+    transform: translate3d(0,-50%,0) rotate(-45deg);
+    transition: all .5s .5s;
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+.ButtonMore__picto:after, .ButtonMore__picto:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    display: inline-block;
+    background-color: #10314c;
+    transform: translate3d(-50%,-50%,0) rotate(-45deg);
+}
+.ButtonMore__picto:after, .ButtonMore__picto:before {
+    transition: transform .5s .5s;
+}
+.ButtonMore__picto:before {
+    width: 12px;
+    height: 2px;
+}
+.ButtonMore__picto:after, .ButtonMore__picto:before {
+    background-color: #fff;
+}
+:after, :before {
+    box-sizing: border-box;
+}
+.ButtonMore__picto:after, .ButtonMore__picto:before {
+    background-color: #fff;
+}
+.ButtonMore__picto:after {
+    width: 2px;
+    height: 12px;
+}
+.ButtonMore__picto:after, .ButtonMore__picto:before {
+    transition: transform .5s .5s;
+}
+.u-hidden-wording {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+}
+button {
+    border: 0;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ButtonMore:focus, .ButtonMore:hover {
+    background-color: #10314c;
+    transform: translate3d(0,-50%,0) rotate(90deg);
+}
+.ButtonMore:focus, .ButtonMore:hover {
+    transform: translateY(-50%) rotate(135deg);
+    transition: all .5s;
+}
+.is-expanded + .dropdownExpand {
+    display: block;
+}
+
+.is-expanded {
+    color: #0089cd;
+}
+.NavSelected{
+    border-bottom-color: #0089cd;
+}
+.is-active {
+    font-weight: 700;
+}
+.MainMenuDropDownList {
+    padding: 16px 32px 32px;
+    position: relative;
+    left: -24px;
+}
+.MainMenuDropDownList__link {
+    line-height: 17px;
+    font-size: 14px;
+}
+.MainMenuDropDownList__element {
+    line-height: 17px;
+}
+.MainMenuDropDownList__element {
+    margin-bottom: 8px;
+}
+.MainMenuDropDownList__element:last-of-type {
+    margin-bottom: 0;
+}
+.MainMenuDropDownList {
+    box-sizing: border-box;
+    padding: 16px 32px 32px;
+    position: absolute;
+    margin: 0 auto 0;
+    left: 103px;
+    top: 80px;
+    z-index: 1;
+    width: 280px;
+    font-size: 14px;
+    color: #10314c;
+    height: fit-content;
+    border-top: 1px solid #f0f3f5;
+    background-color: #fff;
+}
+.financiranjeDropdown {
+    box-sizing: border-box;
+    padding: 16px 32px 32px;
+    position: absolute;
+    margin: 0 auto 0;
+    left: 163px;
+    top: 80px;
+    z-index: 1;
+    width: 280px;
+    font-size: 14px;
+    color: #10314c;
+    height: fit-content;
+    border-top: 1px solid #f0f3f5;
+    background-color: #fff;
+}
+.MainMenuMegaDropDownContent {
+    margin-bottom: 32px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.LinksColumn__title, .ImageColumn__title {
+    margin: 0;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.LinksColumn__list {
+    padding: 0;
+    margin-bottom: 32px;
+}
+.MainMenuMegaDropDownContent__element {
+    width: 280px;
+    height: 280px;
+    margin: 0 32px 8px 0;
+}
+.LinksColumn__link {
+    color: #526275;
+}
+.LinksColumn__listElement{
+    margin-bottom: 8px;
+}
+.LinksColumn__ctaLink {
+    position: relative;
+    font-weight: 700;
+    color:#526275;
+}
+.LinksColumn__ctaLink:hover {
+    color:#0089cd;
+}
+.LinksColumn__ctaLink:hover .LinksColumn__svgArrowRight, 
+.LinksColumn__ctaLink:hover path {
+    margin-left: 22px;
+    color: #0089cd;
+    fill: #0089cd;
+}
+.LinksColumn__svgArrowRight {
+    margin:  3px auto;
+    margin-left: 15px;
+    float: right;
+    color: #526275;
+    fill: #526275;
+    transition: margin-left 0.3s ease;
+}
+.LinksColumn__svgArrowRight path {
+    color: #526275;
+    fill: #526275;
+}
+.ImageColumn__title img {
+    width: 280px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.ImageColumn__title img:hover {
+    transform: scale(1.1);
+}
+.MegaDropdownMarka {
+    margin: 0;
+    grid-template-rows: 264px;
+}
+.MainMenuRangeModels__linkLabel {
+    font-weight: normal;
+    font-size: 13px;
+}
+.MainMenuEntry_home {
+    display: none;
+}
+@media screen and (max-width: 1280rem) {
+    
+    .SvgIcon {
+        display: block;
+        position: relative;
+        height: 2.0rem;
+        width: 2.0rem;
+        margin: auto;
+        vertical-align: top;
+        margin-bottom: auto;
+    }
+    body {
+        overflow: hidden;
+    }
+    .DaciaMainHeader__mobile {
+        display: inherit;
+    }
+    .DaciaMainHeader__icon {
+        display: block;
+    }
+    .Link, .DaciaMainHeader__logo {
+        width: 5.0rem;
+        height: 5.0rem;
+    }
+    .MainMenuRangePicker__content_pos {
+        display: none;
+    }
+    header {
+        height: 5.0rem;
+        width: 100%;
+    }
+    .DaciaMainHeader__mobile {
+        width: 100%;
+        height: 5.0rem;
+        box-sizing: border-box;
+        border-bottom: 1rem solid #f0f3f5;
+        padding-right: 1.6rem;
+    }
+    .DaciaMainHeader__desktop {
+        display: none;
+    }
+    .DaciaMainHeader__title {
+        display: flex;
+        position: relative;
+        float: right;
+        right: 0;
+        height: 4.7rem;
+        width: 13.0rem;
+        margin-top: 1rem;
+    }
+    .DaciaMainHeader__icon {
+        height: 3.0rem;
+        width: 3.0rem;
+        color: #10314c;
+        fill: #10314c;
+        margin: auto;
+    }
+    .DaciaMainHeader__menu {
+        font-size: 1.0rem;
+        margin-top: 4rem;
+        color: #10314c;
+        font-weight: 700;
+    }
+    .DaciaMainHeader__iconButton {
+        padding: 1rem 6rem 1rem 6rem;
+        width: 5.0rem;
+        height: 4.7rem;
+        margin: 0;
+    }
+    .DaciaMainHeader__vehiclesButton {
+        margin-left: auto;
+        width: 5.3rem;
+        height: 4.7rem;
+        padding: 1rem 1.6rem 1rem .6rem;
+        margin-right: 1.6rem;
+        border-right: 1rem solid #dfe4ef;
+    }
+    .DaciaMainHeader__iconButton:focus, .DaciaMainHeader__vehiclesButton:focus {
+        outline: none;
+    }
+    .DaciaMainHeader__desktop {
+        display: flex; 
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .DaciaMainHeader__content {
+        border: none;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        width: 100%;
+        background: #fff;
+        order: 1;
+    }
+    
+    .DaciaMainHeader__overlay {
+        display: inherit;
+        position: relative;
+        height: 100%;
+        width: 6.4rem;
+        padding: 1.6rem;
+        background-color: rgba(0,0,0,.75);
+        box-shadow: 0 -.5rem .7rem 0 rgba(0,0,0,.2);
+        text-align: center;
+        order: 2;
+        padding-bottom: 80vh;
+    }
+    .DaciaMainHeader__brand {
+        display: none;
+    }
+    .DaciaMainHeader__close path {
+        fill: #fff;
+    }
+    .DaciaMainHeader__overlay .DaciaMainHeader__close {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 1.6rem;
+    }
+    .DaciaMainHeader__top {
+        display: flex;
+        padding: 1.6rem;
+        color: black;
+        flex-direction: column;
+        border-bottom: 1rem solid #f0f3f5;
+    }
+    .DaciaMainHeader__top span {
+        text-align: start;
+        display: block;
+        width: 100%;
+    }
+    .MainMenu {
+        display: block;
+    }
+    .DaciaMainHeader__currentWording {
+        font-size: 1.3rem;
+        color: #129ade;
+    }
+    .DaciaMainHeader__currentSite {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #10314c;
+    }
+    .MainMenu {
+        height: auto;
+    }
+    .DaciaMainHeader__bottom,
+    .MainMenu__navList {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-grow: 1;
+    }
+    .DaciaHeaderButtons {
+        position: relative;
+        bottom: 0;
+        margin: auto;
+        margin-bottom: 0;
+    }
+    .MainMenuEntry:hover {
+        border-bottom-color: inherit;
+    }
+    .MainMenuEntry:hover .MainMenuEntry__link {
+        color: #10314c;
+    }
+    .MainMenuEntry__link {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1.6rem;
+        height: 5.5rem;
+        line-height: 2.3rem;
+        text-align: start;
+    }
+    .MainMenuEntry {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        border: none;
+    }
+    .MainMenuEntry__linkText, .MainMenuEntry__link {
+        font-size: 1.6rem;
+    }
+    .MainMenuEntry__dropicon {
+        position: relative;
+        float: right;
+        height: 1.3rem;
+        width: 1.3rem;
+        margin-top: .5rem;
+        right: -.6rem;
+    }
+    .EditorialContentZone {
+        box-sizing: border-box;
+        padding: 1.6rem;
+        position: absolute;
+        margin: 0 auto 0;
+        left: 0;
+        top: 5.5rem;
+        z-index: 2;
+        width: 100%;
+        font-size: 1.4rem;
+        color: #10314c;
+        height: calc(100vh - 55rem - 71rem);
+        background-color: #fff;
+    }
+    .MainMenuEntry__megaDropdown {
+        border:none;
+    }
+    .is-opened + .dropdownExpand {
+        display: flex;
+        align-items: stretch;
+    }
+    .is-opened {
+        position: relative;
+        color: #fff;
+        padding-left: 2.5rem;
+        z-index: 3;
+        background-color: #10314c;
+    }
+    .MainMenuRangeModels {
+        border-left: 1rem solid #f0f3f5;
+        padding-left: 3.2rem;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+    }
+    .MainMenuEntry__dropdown, .MainMenuEntry__megaDropdown {
+        overflow-y: auto;
+    }
+    .NavSelected{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        min-height: 80vh;
+    }
+    .is-opened .MainMenuEntry__dropicon {
+        transform: scale(-1,1);
+        float: left;
+        position: relative;
+        left: -1.2rem;
+        right: 0;
+        fill: #fff;
+    }
+    .is-opened .MainMenuEntry__dropicon path {
+        fill: #fff; 
+    }
+    .MainMenuEntry:hover .is-opened, 
+    .DaciaMainHeader__top:hover .is-opened {
+        color: #fff;
+    }
+    .MainMenuRangePicker__content {
+        width:100%;
+        padding: 1.6rem 0;
+    }
+    .MainMenuRangePicker__contentLeft {
+        width: 100%;
+        text-transform: uppercase;
+        text-align: left;
+        font-weight: 700;
+    }
+    .MainMenuRangePicker__links {
+        width: 100%;
+        padding: 1.6rem 0;
+        border-top: 1rem solid #f0f3f5;
+        margin-top: 0;
+    }
+    .MainMenuRangePicker__listElement {
+        text-transform: initial;
+        margin-bottom: 1.6rem;        
+    }
+    
+    .MainMenuRangePicker__content:hover {
+        cursor: pointer;
+    }
+    .HeaderColumn__SvgIcon {
+        position: relative;
+        display: inherit;
+        float: right;
+        margin-left: auto;
+        margin-right: 1.5rem;
+        height: 1.5rem;
+        width: 1.5rem;
+        color: #10314c;
+        fill: #10314c;
+        font-weight: 700;
+        transform: rotate(90deg);
+    }
+
+/*
+@media screen and (max-width: 1280px) {
+    
+    .SvgIcon {
+        display: block;
+        position: relative;
+        height: 20px;
+        width: 20px;
+        margin: auto;
+        vertical-align: top;
+        margin-bottom: auto;
+    }
+    body {
+        overflow: hidden;
+    }
+    .DaciaMainHeader__mobile {
+        display: inherit;
+    }
+    .DaciaMainHeader__icon {
+        display: block;
+    }
+    .Link, .DaciaMainHeader__logo {
+        width: 50px;
+        height: 50px;
+    }
+    .MainMenuRangePicker__content_pos {
+        display: none;
+    }
+    header {
+        height: 50px;
+        width: 100%;
+    }
+    .DaciaMainHeader__mobile {
+        width: 100%;
+        height: 50px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #f0f3f5;
+        padding-right: 16px;
+    }
+    .DaciaMainHeader__desktop {
+        display: none;
+    }
+    .DaciaMainHeader__title {
+        display: flex;
+        position: relative;
+        float: right;
+        right: 0;
+        height: 47px;
+        width: 130px;
+        margin-top: 1px;
+    }
+    .DaciaMainHeader__icon {
+        height: 30px;
+        width: 30px;
+        color: #10314c;
+        fill: #10314c;
+        margin: auto;
+    }
+    .DaciaMainHeader__menu {
+        font-size: 10px;
+        margin-top: 4px;
+        color: #10314c;
+        font-weight: 700;
+    }
+    .DaciaMainHeader__iconButton {
+        padding: 1px 6px 1px 6px;
+        width: 50px;
+        height: 47px;
+        margin: 0;
+    }
+    .DaciaMainHeader__vehiclesButton {
+        margin-left: auto;
+        width: 53px;
+        height: 47px;
+        padding: 1px 16px 1px 6px;
+        margin-right: 16px;
+        border-right: 1px solid #dfe4ef;
+    }
+    .DaciaMainHeader__iconButton:focus, .DaciaMainHeader__vehiclesButton:focus {
+        outline: none;
+    }
+    .DaciaMainHeader__desktop {
+        display: flex; 
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .DaciaMainHeader__content {
+        border: none;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        width: 100%;
+        background: #fff;
+        order: 1;
+    }
+    
+    .DaciaMainHeader__overlay {
+        display: inherit;
+        position: relative;
+        height: 100%;
+        width: 64px;
+        padding: 16px;
+        background-color: rgba(0,0,0,.75);
+        box-shadow: 0 -5px 7px 0 rgba(0,0,0,.2);
+        text-align: center;
+        order: 2;
+        padding-bottom: 80vh;
+    }
+    .DaciaMainHeader__brand {
+        display: none;
+    }
+    .DaciaMainHeader__close path {
+        fill: #fff;
+    }
+    .DaciaMainHeader__overlay .DaciaMainHeader__close {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 16px;
+    }
+    .DaciaMainHeader__top {
+        display: flex;
+        padding: 16px;
+        color: black;
+        flex-direction: column;
+        border-bottom: 1px solid #f0f3f5;
+    }
+    .DaciaMainHeader__top span {
+        text-align: start;
+        display: block;
+        width: 100%;
+    }
+    .MainMenu {
+        display: block;
+    }
+    .DaciaMainHeader__currentWording {
+        font-size: 13px;
+        color: #129ade;
+    }
+    .DaciaMainHeader__currentSite {
+        font-size: 14px;
+        font-weight: 700;
+        color: #10314c;
+    }
+    .MainMenu {
+        height: auto;
+    }
+    .DaciaMainHeader__bottom,
+    .MainMenu__navList {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-grow: 1;
+    }
+    .DaciaHeaderButtons {
+        position: relative;
+        bottom: 0;
+        margin: auto;
+        margin-bottom: 0;
+    }
+    .MainMenuEntry:hover {
+        border-bottom-color: inherit;
+    }
+    .MainMenuEntry:hover .MainMenuEntry__link {
+        color: #10314c;
+    }
+    .MainMenuEntry__link {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 16px;
+        height: 55px;
+        line-height: 23px;
+        text-align: start;
+    }
+    .MainMenuEntry {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        border: none;
+    }
+    .MainMenuEntry__linkText, .MainMenuEntry__link {
+        font-size: 16px;
+    }
+    .MainMenuEntry__dropicon {
+        position: relative;
+        float: right;
+        height: 13px;
+        width: 13px;
+        margin-top: 5px;
+        right: -6px;
+    }
+    .EditorialContentZone {
+        box-sizing: border-box;
+        padding: 16px;
+        position: absolute;
+        margin: 0 auto 0;
+        left: 0;
+        top: 55px;
+        z-index: 2;
+        width: 100%;
+        font-size: 14px;
+        color: #10314c;
+        height: calc(100vh - 55px - 71px);
+        background-color: #fff;
+    }
+    .MainMenuEntry__megaDropdown {
+        border:none;
+    }
+    .is-opened + .dropdownExpand {
+        display: flex;
+        align-items: stretch;
+    }
+    .is-opened {
+        position: relative;
+        color: #fff;
+        padding-left: 25px;
+        z-index: 3;
+        background-color: #10314c;
+    }
+    .MainMenuRangeModels {
+        border-left: 1px solid #f0f3f5;
+        padding-left: 32px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+    }
+    .MainMenuEntry__dropdown, .MainMenuEntry__megaDropdown {
+        overflow-y: auto;
+    }
+    .NavSelected{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        min-height: 80vh;
+    }
+    .is-opened .MainMenuEntry__dropicon {
+        transform: scale(-1,1);
+        float: left;
+        position: relative;
+        left: -12px;
+        right: 0;
+        fill: #fff;
+    }
+    .is-opened .MainMenuEntry__dropicon path {
+        fill: #fff; 
+    }
+    .MainMenuEntry:hover .is-opened, 
+    .DaciaMainHeader__top:hover .is-opened {
+        color: #fff;
+    }
+    .MainMenuRangePicker__content {
+        width:100%;
+        padding: 16px 0;
+    }
+    .MainMenuRangePicker__contentLeft {
+        width: 100%;
+        text-transform: uppercase;
+        text-align: left;
+        font-weight: 700;
+    }
+    .MainMenuRangePicker__links {
+        width: 100%;
+        padding: 16px 0;
+        border-top: 1px solid #f0f3f5;
+        margin-top: 0;
+    }
+    .MainMenuRangePicker__listElement {
+        text-transform: initial;
+        margin-bottom: 16px;        
+    }
+    
+    .MainMenuRangePicker__content:hover {
+        cursor: pointer;
+    }
+    .HeaderColumn__SvgIcon {
+        position: relative;
+        display: inherit;
+        float: right;
+        margin-left: auto;
+        margin-right: 15px;
+        height: 15px;
+        width: 15px;
+        color: #10314c;
+        fill: #10314c;
+        font-weight: 700;
+        transform: rotate(90deg);
+    }
+}
